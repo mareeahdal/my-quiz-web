@@ -3,61 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Quiz</title>
-  
+    <title>Tech Quiz - Test Your Tech Knowledge</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
+    <nav>
+        <a href="index.html" class="logo">Tech Quiz</a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="trivia.html">Trivia</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
 
-<div class="container">
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Tech Quiz</h1>
+                <p>Challenge yourself with our interactive tech quizzes and trivia. Test your knowledge, build your streak, and become a tech expert!</p>
+                <div class="hero-buttons">
+                    <a href="quiz.html" class="btn">Start Quiz</a>
+                    <a href="trivia.html" class="btn btn-secondary">Play Trivia</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-icon">💻</div>
+            </div>
+        </div>
 
-    <!--nav-->
-  <nav>
-    <img src="" alt="Tech Quiz Logo">
-    <ul>
-      <li><a href="#trivia">Trivia</a></li>
-      <li><a href="#quiz">Quiz</a></li>
-      </ul>
-  </nav>
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="section-header">
+                <h2>Why Choose Tech Quiz?</h2>
+                <p>Engaging, educational, and fun tech challenges</p>
+            </div>
+            
+            <div class="section-grid">
+                <div class="card feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Learn & Grow</h3>
+                    <p>Expand your tech knowledge with carefully crafted questions covering the latest technologies and trends.</p>
+                </div>
+                
+                <div class="card feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Quick & Fun</h3>
+                    <p>Fast-paced trivia and structured quizzes designed to keep you engaged and entertained.</p>
+                </div>
+                
+                <div class="card feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your performance, build streaks, and see your improvement over time.</p>
+                </div>
+            </div>
+        </section>
 
-
-       <!--Hero-->
-
-
-<div class="hero">
-    <div class="hero-content">
-    <h1>Welcome to the Tech Quiz</h1>
-    <p>Test your knowledge on the latest in technology!</p>
-    <a href="#quiz" class="btn">Start Quiz</a>
+        <!-- Quiz & Trivia Sections -->
+        <section class="game-sections">
+            <div class="section-grid">
+                <div class="card game-card quiz-card">
+                    <div class="game-icon">📝</div>
+                    <h2>Quiz Mode</h2>
+                    <p>Take structured quizzes with multiple questions. Get instant feedback and see your final score!</p>
+                    <ul class="game-features">
+                        <li>✓ 10 questions per quiz</li>
+                        <li>✓ Instant feedback</li>
+                        <li>✓ Track your progress</li>
+                    </ul>
+                    <a href="quiz.html" class="btn">Take Quiz</a>
+                </div>
+                
+                <div class="card game-card trivia-card">
+                    <div class="game-icon">🎲</div>
+                    <h2>Trivia Mode</h2>
+                    <p>Answer random tech questions and build your streak! Perfect for quick knowledge checks.</p>
+                    <ul class="game-features">
+                        <li>✓ Random questions</li>
+                        <li>✓ Streak counter</li>
+                        <li>✓ Endless fun</li>
+                    </ul>
+                    <a href="trivia.html" class="btn btn-secondary">Play Trivia</a>
+                </div>
+            </div>
+        </section>
     </div>
-
-    <img src="" alt="Tech Quiz Hero Image">
-  </div>
-
-    <!--Quiz Section-->
-
-    <div class="quiz-section" id="quiz">
-        <h2>Quiz</h2>
-        <p>Put your tech knowledge to the test!</p>
-        <a href="#" class="btn">Take the Quiz</a>
-    </div>
-
-    <!--Trivia Section-->
-
-    <div class="trivia-section" id="trivia">
-        <h2>Trivia</h2>
-        <p>Test your knowledge with our trivia questions!</p>
-        <a href="#" class="btn">Play Trivia</a>
-    </div>
-
-
-
-
-    <!--footer-->
 
     <footer>
         <p>&copy; 2025 Tech Quiz. All rights reserved.</p>
-
     </footer>
-</div>
 </body>
 </html>
