@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Tech Quiz</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Tech Quiz</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trivia.html">Trivia</a></li>
+            <li><a href="quiz.html" class="active">Quiz</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Quiz Start Screen -->
+        <div id="startScreen" class="quiz-screen">
+            <div class="start-card card">
+                <h1>Tech Knowledge Quiz</h1>
+                <p>Test your understanding of technology with 10 challenging questions</p>
+                <div class="quiz-info">
+                    <div class="info-item">
+                        <span class="info-icon">⏱️</span>
+                        <span>No time limit</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📊</span>
+                        <span>Instant feedback</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🎯</span>
+                        <span>10 questions</span>
+                    </div>
+                </div>
+                <button class="btn" onclick="startQuiz()">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Question Screen -->
+        <div id="questionScreen" class="quiz-screen hidden">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <div class="question-counter">
+                    <span id="questionNumber">1</span> / <span id="totalQuestions">10</span>
+                </div>
+            </div>
+
+            <div class="question-card card">
+                <h2 id="questionText">Loading question...</h2>
+                <div class="options-container" id="optionsContainer">
+                    <!-- Options will be dynamically inserted -->
+                </div>
+            </div>
+
+            <div class="quiz-actions">
+                <button class="btn btn-secondary" onclick="previousQuestion()" id="prevBtn" disabled>Previous</button>
+                <button class="btn" onclick="nextQuestion()" id="nextBtn">Next</button>
+            </div>
+        </div>
+
+        <!-- Quiz Results Screen -->
+        <div id="resultsScreen" class="quiz-screen hidden">
+            <div class="results-card card">
+                <div class="results-header">
+                    <h1>Quiz Complete! 🎉</h1>
+                    <div class="score-circle">
+                        <div class="score-value" id="finalScore">0</div>
+                        <div class="score-total">/ 10</div>
+                    </div>
+                </div>
+                
+                <div class="results-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="correctAnswers">0</div>
+                        <div class="stat-label">Correct</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="incorrectAnswers">0</div>
+                        <div class="stat-label">Incorrect</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="percentage">0%</div>
+                        <div class="stat-label">Score</div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn" onclick="restartQuiz()">Take Quiz Again</button>
+                    <a href="trivia.html" class="btn btn-secondary">Try Trivia</a>
+                    <a href="index.html" class="btn btn-secondary">Go Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tech Quiz. All rights reserved.</p>
+    </footer>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
+

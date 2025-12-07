@@ -1,0 +1,282 @@
+/* ============================================
+   LOGIN PAGE STYLES
+   ============================================ */
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  width: 100%;
+  max-width: 450px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  z-index: 10;
+  animation: fadeInUp 0.8s ease;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.login-header h1 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.login-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+
+.login-form {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(26, 31, 58, 0.6);
+  border: 2px solid rgba(168, 85, 247, 0.2);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all var(--transition-base);
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+  background: rgba(26, 31, 58, 0.8);
+}
+
+.form-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  font-size: 0.9rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  cursor: pointer;
+  accent-color: var(--accent-purple);
+}
+
+.forgot-link {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.forgot-link:hover {
+  color: var(--accent-purple);
+}
+
+.btn-login {
+  width: 100%;
+  padding: var(--spacing-md);
+  font-size: 1.1rem;
+  margin-top: var(--spacing-md);
+}
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+  color: var(--text-muted);
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(168, 85, 247, 0.2);
+}
+
+.login-divider span {
+  padding: 0 var(--spacing-md);
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   SOCIAL LOGIN
+   ============================================ */
+
+.social-login {
+  margin-bottom: var(--spacing-lg);
+}
+
+.btn-social {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(26, 31, 58, 0.6);
+  border: 2px solid rgba(168, 85, 247, 0.2);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.btn-social:hover {
+  border-color: var(--accent-purple);
+  background: rgba(26, 31, 58, 0.8);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.login-footer {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.login-footer p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.login-footer a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.login-footer a:hover {
+  color: var(--accent-purple);
+}
+
+/* ============================================
+   BACKGROUND SHAPES
+   ============================================ */
+
+.login-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: float 20s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-purple);
+  top: -200px;
+  right: -200px;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--accent-cyan);
+  bottom: -150px;
+  left: -150px;
+  animation-delay: 5s;
+}
+
+.shape-3 {
+  width: 250px;
+  height: 250px;
+  background: var(--accent-blue);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .login-header h1 {
+    font-size: 1.75rem;
+  }
+}
+

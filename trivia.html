@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia - Tech Quiz</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/trivia.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Tech Quiz</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trivia.html" class="active">Trivia</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Trivia Start Screen -->
+        <div id="startScreen" class="trivia-screen">
+            <div class="start-card card">
+                <h1>Tech Trivia Challenge</h1>
+                <p>Answer random tech questions and build your streak!</p>
+                <div class="trivia-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🎲</span>
+                        <span>Random Questions</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔥</span>
+                        <span>Streak Counter</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span>Quick Answers</span>
+                    </div>
+                </div>
+                <button class="btn" onclick="startTrivia()">Start Playing</button>
+            </div>
+        </div>
+
+        <!-- Trivia Game Screen -->
+        <div id="gameScreen" class="trivia-screen hidden">
+            <div class="trivia-header">
+                <div class="streak-counter">
+                    <span class="streak-icon">🔥</span>
+                    <span class="streak-value" id="streakValue">0</span>
+                    <span class="streak-label">Streak</span>
+                </div>
+                <div class="score-display">
+                    <span class="score-label">Score</span>
+                    <span class="score-value" id="scoreValue">0</span>
+                </div>
+            </div>
+
+            <div class="trivia-card card">
+                <div class="question-number">Question #<span id="questionNum">1</span></div>
+                <h2 id="triviaQuestion">Loading question...</h2>
+                <div class="trivia-options" id="triviaOptions">
+                    <!-- Options will be dynamically inserted -->
+                </div>
+            </div>
+
+            <div class="feedback-message" id="feedbackMessage"></div>
+        </div>
+
+        <!-- Trivia End Screen -->
+        <div id="endScreen" class="trivia-screen hidden">
+            <div class="end-card card">
+                <h1>Great Job! 🎉</h1>
+                <div class="final-stats">
+                    <div class="final-stat">
+                        <div class="final-value" id="finalStreak">0</div>
+                        <div class="final-label">Best Streak</div>
+                    </div>
+                    <div class="final-stat">
+                        <div class="final-value" id="finalScore">0</div>
+                        <div class="final-label">Total Score</div>
+                    </div>
+                    <div class="final-stat">
+                        <div class="final-value" id="questionsAnswered">0</div>
+                        <div class="final-label">Questions</div>
+                    </div>
+                </div>
+                <div class="end-actions">
+                    <button class="btn" onclick="restartTrivia()">Play Again</button>
+                    <a href="quiz.html" class="btn btn-secondary">Try Quiz</a>
+                    <a href="index.html" class="btn btn-secondary">Go Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tech Quiz. All rights reserved.</p>
+    </footer>
+
+    <script src="js/trivia.js"></script>
+</body>
+</html>
+
